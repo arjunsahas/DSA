@@ -2,7 +2,7 @@ package com.arjun.algorithms.tree;
 
 import java.util.Scanner;
 
-import com.arjun.tree.BinaryTree.Node;
+import com.arjun.algorithms.tree.BinaryTree.Node;
 
 public class RunBinaryTree {
 	public static void main(String[] args) {

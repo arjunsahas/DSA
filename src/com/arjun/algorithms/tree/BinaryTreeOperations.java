@@ -1,6 +1,6 @@
 package com.arjun.algorithms.tree;
 
-import com.arjun.tree.BinaryTree.Node;
+import com.arjun.algorithms.tree.BinaryTree.Node;
 
 public class BinaryTreeOperations {
 	public static void insert(BinaryTree t, Node z) {

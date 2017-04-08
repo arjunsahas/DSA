@@ -1,12 +1,12 @@
 package com.arjun.algorithms.tree;
 
-public class BinaryTree {
+public class BinarySearchTree {
 	private Node root = null;
 
 	public static class Node {
 		private Node left;
 		private Node right;
-		private Node p;
+		private Node parent;
 		private int key;
 
 		public Node getLeft() {
@@ -25,12 +25,12 @@ public class BinaryTree {
 			this.right = right;
 		}
 
-		public Node getP() {
-			return p;
+		public Node getParent() {
+			return parent;
 		}
 
-		public void setP(Node p) {
-			this.p = p;
+		public void setParent(Node parent) {
+			this.parent = parent;
 		}
 
 		public int getKey() {

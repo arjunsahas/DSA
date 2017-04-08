@@ -1,9 +1,9 @@
 package com.arjun.algorithms.tree;
 
-import com.arjun.algorithms.tree.BinaryTree.Node;
+import com.arjun.algorithms.tree.BinarySearchTree.Node;
 
 public class BinaryTreeOperations {
-	public static void insert(BinaryTree t, Node z) {
+	public static void insert(BinarySearchTree t, Node z) {
 		Node x = t.getRoot();
 		Node y = null;
 		while (x != null) {
@@ -14,7 +14,7 @@ public class BinaryTreeOperations {
 				x = x.getRight();
 			}
 		}
-		z.setP(y);
+		z.setParent(y);
 		if (y == null) {
 			t.setRoot(z);
 		} else if (z.getKey() < y.getKey())
@@ -23,7 +23,7 @@ public class BinaryTreeOperations {
 			y.setRight(z);
 	}
 
-	public static void delete(BinaryTree t, Node z) {
+	public static void delete(BinarySearchTree t, Node z) {
 
 	}
 
@@ -69,10 +69,10 @@ public class BinaryTreeOperations {
 		if (x.getRight() != null) {
 			return treeMinimum(x.getRight());
 		}
-		Node y = x.getP();
+		Node y = x.getParent();
 		while (y != null && x.equals(y.getRight())) {
 			x = y;
-			y = y.getP();
+			y = y.getParent();
 		}
 		return y;
 	}
@@ -81,10 +81,10 @@ public class BinaryTreeOperations {
 		if (x.getLeft() != null) {
 			return treeMaximum(x.getLeft());
 		}
-		Node y = x.getP();
+		Node y = x.getParent();
 		while (y != null && x.equals(y.getLeft())) {
 			x = y;
-			y = y.getP();
+			y = y.getParent();
 		}
 		return y;
 

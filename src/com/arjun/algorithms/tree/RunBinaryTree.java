@@ -2,7 +2,7 @@ package com.arjun.algorithms.tree;
 
 import java.util.Scanner;
 
-import com.arjun.algorithms.tree.BinaryTree.Node;
+import com.arjun.algorithms.tree.BinarySearchTree.Node;
 
 public class RunBinaryTree {
 	public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class RunBinaryTree {
 		// 15 18 6 17 20 3 2 4 7 13 9 
 
 		// Insert
-		BinaryTree tree = new BinaryTree();
+		BinarySearchTree tree = new BinarySearchTree();
 		for (int i : ar) {
 			Node z = new Node();
 			z.setKey(i);

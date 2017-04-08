@@ -1,27 +1,19 @@
 package com.arjun.threads.lock.print;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Main {
 
-  /**
-   * @param args
-   */
-  public static void main(String[] args) {
-    PrintQueue printQueue = new PrintQueue();
-    Thread thread[] = new Thread[10];
-    for(int i = 0; i < 10; i++) {
-      thread[i] = new Thread(new Job(printQueue), "Thread " + i);
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        PrintQueue printQueue = new PrintQueue();
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        for (int i = 0; i < 2147483647; i++) {
+            executorService.execute(new Job(printQueue));
+        }
     }
-    for(int i = 0; i < 10; i++) {
-      thread[i].start();
-    }
-    for(int i = 0; i < 10; i++) {
-      try {
-        thread[i].join();
-      }
-      catch(InterruptedException e) {
-        e.printStackTrace();
-      }      
-    }
-  }
 
 }

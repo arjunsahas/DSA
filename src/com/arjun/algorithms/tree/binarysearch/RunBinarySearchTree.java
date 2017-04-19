@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.arjun.algorithms.tree.binarysearch.BinarySearchTree.Node;
 
 
-public class RunBinaryTree {
+public class RunBinarySearchTree {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
@@ -26,6 +26,16 @@ public class RunBinaryTree {
         // 0			    10
 
         // 15 18 6 17 20 3 2 4 7 13 9
+
+        //            15
+        //          /    \
+        //         6      18
+        //       /   \    /  \
+        //     3     7   17   20
+        //    / \     \
+        //  2    4     13
+        //            /
+        //           9
 
         // Insert
         Node root = new Node();
@@ -69,6 +79,17 @@ public class RunBinaryTree {
         x = BinarySearchTreeOperations.treeSearch(root, k);
         Node predecessor = BinarySearchTreeOperations.predecessor(root, x);
         System.out.println("Predecessor is: " + predecessor);
+
+        int x1 = in.nextInt();
+        int y1 = in.nextInt();
+        Node nx1 = BinarySearchTreeOperations.treeSearch(root, x1);
+        Node nx2 = BinarySearchTreeOperations.treeSearch(root, y1);
+        Node node = BinarySearchTreeOperations.leastCommonAncestor(root, nx1, nx2);
+        System.out.println("Least Common Ancestor is : " + node.getKey());
+
+        boolean bst = BinarySearchTreeOperations.isBST(root);
+        System.out.println(root + " is " + (bst ? "" : "not") + "a binary search tree");
+
 
     }
 }

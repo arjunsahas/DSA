@@ -1,4 +1,4 @@
-package com.arjun.algorithms.tree;
+package com.arjun.algorithms.tree.binarysearch.v1;
 
 public class BinarySearchTree {
 	private Node root = null;

@@ -27,7 +27,9 @@ public class BinarySearchTreeOperations {
         }
     }
 
-    public static void delete(BinarySearchTree t, Node z) {
+    public static void delete(Node root, int k) {
+        Node x = treeSearch(root, k);
+        boolean isLeafNode = isLeafNode(x);
 
     }
 
@@ -46,7 +48,6 @@ public class BinarySearchTreeOperations {
         }
     }
 
-
     /**
      * visit root
      * traverse left subtree
@@ -61,6 +62,7 @@ public class BinarySearchTreeOperations {
             preorderTreeWalk(root.getRight());
         }
     }
+
 
     /**
      * traverse left subtree
@@ -147,6 +149,49 @@ public class BinarySearchTreeOperations {
             }
         }
         return null;
+    }
+
+
+    public static Node leastCommonAncestor(Node root, Node x, Node y) {
+        while (true) {
+            if ((x.getKey() < root.getKey() && y.getKey() > root.getKey()) || (x.getKey() > root.getKey() && y
+                    .getKey() <
+                    root.getKey())) {
+                return root;
+            } else if (x.getKey() < root.getKey()) {
+                root = root.getLeft();
+            } else root = root.getRight();
+        }
+    }
+
+    public static boolean isBST(Node root) {
+        if (root == null)
+            return true;
+        else if (root.getLeft() != null && root.getKey() < treeMaximum(root.getLeft()).getKey()) {
+            return false;
+        } else if (root.getRight() != null && root.getKey() > treeMinimum(root.getRight()).getKey()) {
+            return false;
+        } else if (!isBST(root.getLeft()) || !isBST(root.getRight())) {
+            return false;
+        }
+        return true;
+    }
+
+
+//    public static boolean isBSTUsingInorder(Node root) {
+//        int previous = 0;
+//        isBSTUsingInorder(root.getLeft());
+//    }
+
+    public static void convertBSTToDLL(Node root) {
+        while (root.getLeft() != null) {
+            root = root.getLeft();
+        }
+
+    }
+
+    private static boolean isLeafNode(Node x) {
+        return x.getLeft() == null && x.getRight() == null;
     }
 
 }

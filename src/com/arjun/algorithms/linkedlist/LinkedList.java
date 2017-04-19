@@ -1,4 +1,4 @@
-package com.arjun.algorithms;
+package com.arjun.algorithms.linkedlist;
 
 public class LinkedList<T> {
   private T data;

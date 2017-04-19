@@ -1,6 +1,6 @@
-package com.arjun.algorithms.tree;
+package com.arjun.algorithms.tree.binarysearch.v1;
 
-import com.arjun.algorithms.tree.BinarySearchTree.Node;
+import com.arjun.algorithms.tree.binarysearch.v1.BinarySearchTree.Node;
 
 public class BinaryTreeOperations {
 	public static void insert(BinarySearchTree t, Node z) {

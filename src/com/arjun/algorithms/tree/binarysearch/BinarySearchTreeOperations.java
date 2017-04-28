@@ -27,6 +27,60 @@ public class BinarySearchTreeOperations {
         }
     }
 
+    public static void balancedTreeInsert(Node root, int k) {
+        if (root.getKey() == null) {
+            root.setKey(k);
+        } else {
+            Node n = new Node();
+            n.setKey(k);
+            Node x = root;
+            Node y = null;
+            while (x != null) {
+                y = x;
+                if (n.getKey() < x.getKey()) {
+                    x = x.getLeft();
+                } else {
+                    x = x.getRight();
+                }
+            }
+            if (n.getKey() < y.getKey()) {
+                y.setLeft(n);
+                if (height(y.getLeft()) - height(y.getRight()) == 2) {
+                    if (n.getKey() < y.getLeft().getKey()) {
+                        y = singleRotateLeft(y);
+                    } else y = doubleRotateLeft(y);
+                } else {
+                    y.setRight(n);
+                    if (height(y.getRight()) - height(y.getLeft()) == 2) {
+                        if (n.getKey() < y.getRight().getKey()) {
+                            y = singleRotateRight(y);
+                        } else y = doubleRotateRight(y);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    private static Node singleRotateLeft(final Node root) {
+        Node left = root.getLeft();
+
+        return null;
+    }
+
+    private static Node singleRotateRight(final Node root) {
+        return null;
+    }
+
+    private static Node doubleRotateLeft(final Node y) {
+        return null;
+    }
+
+    private static Node doubleRotateRight(final Node y) {
+        return null;
+    }
+
     public static void delete(Node root, int k) {
         Node x = treeSearch(root, k);
         boolean isLeafNode = isLeafNode(x);
@@ -183,15 +237,20 @@ public class BinarySearchTreeOperations {
 //        isBSTUsingInorder(root.getLeft());
 //    }
 
-    public static void convertBSTToDLL(Node root) {
-        while (root.getLeft() != null) {
-            root = root.getLeft();
-        }
-
-    }
-
     private static boolean isLeafNode(Node x) {
         return x.getLeft() == null && x.getRight() == null;
+    }
+
+    public static int height(Node n) {
+        if (n == null) {
+            return -1;
+        } else {
+            return max(height(n.getLeft()), height(n.getRight())) + 1;
+        }
+    }
+
+    public static int max(final int l, final int r) {
+        return l >= r ? l : r;
     }
 
 }

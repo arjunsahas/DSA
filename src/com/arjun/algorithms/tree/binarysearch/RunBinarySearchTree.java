@@ -91,5 +91,9 @@ public class RunBinarySearchTree {
         System.out.println(root + " is " + (bst ? "" : "not") + "a binary search tree");
 
 
+        int height = BinarySearchTreeOperations.height(root);
+        System.out.println("Height of the tree is " + height);
+
+
     }
 }

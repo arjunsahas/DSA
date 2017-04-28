@@ -1,7 +1,6 @@
 package com.arjun.algorithms.tree.binarysearch;
 
 public class BinarySearchTree {
-	private Node root = null;
 
 	public static class Node {
 		private Node left;
@@ -59,14 +58,6 @@ public class BinarySearchTree {
 			return true;
 		}
 
-	}
-
-	public Node getRoot() {
-		return root;
-	}
-
-	public void setRoot(Node root) {
-		this.root = root;
 	}
 
 }

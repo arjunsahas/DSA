@@ -9,14 +9,14 @@ import java.util.Iterator;
 public class Run {
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.insert(4);
+        linkedList.insert(6);
         linkedList.insertAtBeginning(3);
         linkedList.insertAtBeginning(2);
         linkedList.insertAtBeginning(1);
-
-        linkedList.insert(4);
-        linkedList.insert(6);
-
         linkedList.insertAt(4, 5);
+
+
 
 
         Iterator<Integer> iterator = linkedList.iterator();

@@ -32,9 +32,7 @@ public class LinkedList<T> {
     public boolean insertAtBeginning(T data) {
         checkDataNull(data);
         if (first == null) {
-            Node<T> node = createNode(data);
-            first = node;
-            curr = node;
+            createFirstNode(data);
         } else {
             Node<T> node = createNode(data);
             node.setNext(first);
@@ -43,21 +41,31 @@ public class LinkedList<T> {
         return true;
     }
 
+    private void createFirstNode(final T data) {
+        Node<T> node = createNode(data);
+        first = node;
+        curr = node;
+    }
+
     public boolean insert(T data) {
         checkDataNull(data);
-        Node<T> node = createNode(data);
-        node.setNext(null);
-        curr.setNext(node);
-        curr = node;
+        if (first == null) {
+            createFirstNode(data);
+        } else {
+            Node<T> node = createNode(data);
+            node.setNext(null);
+            curr.setNext(node);
+            curr = node;
+        }
         return true;
     }
 
     public boolean insertAt(int index, T data) {
         checkDataNull(data);
-        Node<T> curr = first;
-        if (index > size()) {
+        if (first == null || index > size()) {
             throw new RuntimeException("index not found");
         }
+        Node<T> curr = first;
         int count = 0;
         Node<T> previous = null;
         while (curr != null) {
@@ -108,6 +116,7 @@ public class LinkedList<T> {
     }
 
     private boolean insert(int index, T data) {
+        // TODO
         return true;
     }
 
@@ -142,7 +151,7 @@ public class LinkedList<T> {
 
         @Override
         public void remove() {
-
+            // TODO
         }
     }
 }

@@ -5,7 +5,7 @@ import java.util.Stack;
 
 import com.arjun.algorithms.tree.binarysearch.BinarySearchTreeOperations;
 
-import com.arjun.algorithms.linkedlist.DoublyLinkedList.LLNode;
+import com.arjun.algorithms.linkedlist.doubly.DoublyLinkedList.LLNode;
 
 import static com.arjun.algorithms.tree.binarysearch.BinarySearchTree.Node;
 

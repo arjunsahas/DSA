@@ -3,7 +3,7 @@ package com.arjun.algorithms.tree.binarysearch.problem;
 import java.util.Scanner;
 import java.util.Stack;
 
-import com.arjun.algorithms.linkedlist.DoublyLinkedList.LLNode;
+import com.arjun.algorithms.linkedlist.doubly.DoublyLinkedList.LLNode;
 import com.arjun.algorithms.tree.binarysearch.BinarySearchTreeOperations;
 
 import static com.arjun.algorithms.tree.binarysearch.BinarySearchTree.Node;

@@ -14,6 +14,16 @@ public class RunBFS {
         Node g = new Node('G');
         Node h = new Node('H');
 
+        //              A
+        //            /
+        //           B
+        //         /  \
+        //       C    H
+        //      /  \
+        //     D    E
+        //         / \
+        //        F   G
+
         BFS bfs = new BFS();
         bfs.connect(a, b);
         bfs.connect(b, c);

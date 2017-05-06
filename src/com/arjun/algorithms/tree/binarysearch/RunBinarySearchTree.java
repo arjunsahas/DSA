@@ -38,9 +38,17 @@ public class RunBinarySearchTree {
         //           9
 
         // Insert
-        Node root = new Node();
-        for (int i : ar) {
-            BinarySearchTreeOperations.insert(root, i);
+//        Node root = new Node();
+//        for (int i : ar) {
+//            BinarySearchTreeOperations.insert(root, i);
+//        }
+
+        // comment this before running AVL Tree
+        Node root = BinarySearchTreeOperations.balancedTreeInsert(null, ar[0]);
+        for (int i = 1; i < ar.length; i++) {
+            Node node = BinarySearchTreeOperations.balancedTreeInsert(root, ar[i]);
+            root = node;
+
         }
 
         // inorder tree walk
@@ -80,12 +88,12 @@ public class RunBinarySearchTree {
         Node predecessor = BinarySearchTreeOperations.predecessor(root, x);
         System.out.println("Predecessor is: " + predecessor);
 
-        int x1 = in.nextInt();
-        int y1 = in.nextInt();
-        Node nx1 = BinarySearchTreeOperations.treeSearch(root, x1);
-        Node nx2 = BinarySearchTreeOperations.treeSearch(root, y1);
-        Node node = BinarySearchTreeOperations.leastCommonAncestor(root, nx1, nx2);
-        System.out.println("Least Common Ancestor is : " + node.getKey());
+//        int x1 = in.nextInt();
+//        int y1 = in.nextInt();
+//        Node nx1 = BinarySearchTreeOperations.treeSearch(root, x1);
+//        Node nx2 = BinarySearchTreeOperations.treeSearch(root, y1);
+//        Node node = BinarySearchTreeOperations.leastCommonAncestor(root, nx1, nx2);
+//        System.out.println("Least Common Ancestor is : " + node.getKey());
 
         boolean bst = BinarySearchTreeOperations.isBST(root);
         System.out.println(root + " is " + (bst ? "" : "not") + "a binary search tree");

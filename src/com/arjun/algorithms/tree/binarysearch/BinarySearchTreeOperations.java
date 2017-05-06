@@ -27,59 +27,68 @@ public class BinarySearchTreeOperations {
         }
     }
 
-    public static void balancedTreeInsert(Node root, int k) {
-        if (root.getKey() == null) {
-            root.setKey(k);
-        } else {
+    /**
+     * AVL Tree
+     *
+     * @param root
+     * @param k
+     * @return
+     */
+    public static Node balancedTreeInsert(Node root, int k) {
+        if (root == null) {
             Node n = new Node();
             n.setKey(k);
-            Node x = root;
-            Node y = null;
-            while (x != null) {
-                y = x;
-                if (n.getKey() < x.getKey()) {
-                    x = x.getLeft();
-                } else {
-                    x = x.getRight();
+            return n;
+        } else {
+            if (k < root.getKey()) {
+                root.setLeft(balancedTreeInsert(root.getLeft(), k));
+            } else if (k > root.getKey()) {
+                root.setRight(balancedTreeInsert(root.getRight(), k));
+            } else {
+                return root;
+            }
+            if (height(root.getLeft()) - height(root.getRight()) == 2) {
+                // Left Left Case
+                if (k < root.getLeft().getKey()) {
+                    return rotateRight(root);
+                } else { // TODO Fix
+                    Node y = rotateLeft(root);
+                    return rotateRight(y);
+                }
+            } else if (height(root.getRight()) - height(root.getLeft()) == 2) {
+                if (k > root.getRight().getKey()) {
+                    return rotateLeft(root);
+                } else { // TODO Fix
+                    Node y = rotateLeft(root);
+                    return rotateRight(y);
                 }
             }
-            if (n.getKey() < y.getKey()) {
-                y.setLeft(n);
-                if (height(y.getLeft()) - height(y.getRight()) == 2) {
-                    if (n.getKey() < y.getLeft().getKey()) {
-                        y = singleRotateLeft(y);
-                    } else y = doubleRotateLeft(y);
-                } else {
-                    y.setRight(n);
-                    if (height(y.getRight()) - height(y.getLeft()) == 2) {
-                        if (n.getKey() < y.getRight().getKey()) {
-                            y = singleRotateRight(y);
-                        } else y = doubleRotateRight(y);
-                    }
-                }
 
-            }
         }
-
+        return root;
     }
 
-    private static Node singleRotateLeft(final Node root) {
-        Node left = root.getLeft();
 
-        return null;
+    private static Node rotateRight(final Node x) {
+        Node y = x.getLeft();
+        Node t2 = y.getRight();
+
+        y.setRight(x);
+        x.setLeft(t2);
+
+        return y;
     }
 
-    private static Node singleRotateRight(final Node root) {
-        return null;
+    private static Node rotateLeft(final Node x) {
+        Node y = x.getRight();
+        Node t1 = y.getLeft();
+
+        y.setLeft(x);
+        x.setRight(t1);
+
+        return y;
     }
 
-    private static Node doubleRotateLeft(final Node y) {
-        return null;
-    }
-
-    private static Node doubleRotateRight(final Node y) {
-        return null;
-    }
 
     public static void delete(Node root, int k) {
         Node x = treeSearch(root, k);
@@ -161,8 +170,8 @@ public class BinarySearchTreeOperations {
     }
 
     // if right subtree of node x is empty and x has a successor y,
-    // then y is the lowest ancestor of x whose left child is also the ancestor
-    // of x
+// then y is the lowest ancestor of x whose left child is also the ancestor
+// of x
     public static Node successor(Node root, Node x) {
         if (x.getRight() != null) {
             return treeMinimum(x.getRight());

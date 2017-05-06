@@ -1,6 +1,8 @@
 package com.arjun.algorithms.linkedlist.singly;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class LinkedList<T> {
 
@@ -124,6 +126,25 @@ public class LinkedList<T> {
         if (data == null) {
             throw new RuntimeException("data cannot be null");
         }
+    }
+
+    boolean hasCycle(Node head) {
+        if (head == null) {
+            return false;
+        }
+
+        List<Node> list = new ArrayList<>();
+
+        Node n = head;
+        list.add(n);
+        while (n != null) {
+            n = n.next;
+            if (list.contains(n)) {
+                return true;
+            }
+            list.add(n);
+        }
+        return true;
     }
 
     public Iterator iterator() {

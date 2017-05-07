@@ -19,12 +19,28 @@ public class TwoStacks {
             }
         }
 
+        // Optimal
+        private void populateOld() {
+            if (stackOldestOnTop.isEmpty()) {
+                while (!stackNewestOnTop.empty()) {
+                    stackOldestOnTop.push(stackNewestOnTop.pop());
+                }
+            }
+        }
+
+        public void enqueue1(T value) { // Push onto newest stack
+            stackNewestOnTop.push(value);
+
+        }
+
         public T peek() {
+            populateOld();
             T peek = stackOldestOnTop.peek();
             return peek;
         }
 
         public T dequeue() {
+            populateOld();
             T pop = stackOldestOnTop.pop();
             stackNewestOnTop.remove(pop);
             return pop;
@@ -41,7 +57,7 @@ public class TwoStacks {
         for (int i = 0; i < n; i++) {
             int operation = scan.nextInt();
             if (operation == 1) { // enqueue
-                queue.enqueue(scan.nextInt());
+                queue.enqueue1(scan.nextInt());
             } else if (operation == 2) { // dequeue
                 queue.dequeue();
             } else if (operation == 3) { // print/peek

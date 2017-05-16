@@ -227,6 +227,16 @@ public class BinarySearchTreeOperations {
         }
     }
 
+    boolean checkBST(Node root) {
+        if (root == null)
+            return true;
+        else if (root.getLeft() != null && root.getKey() <= treeMaximum(root.getLeft()).getKey() || root
+                .getRight() != null && root.getKey() >= treeMinimum(root.getRight()).getKey()) {
+            return false;
+        } else return checkBST(root.getLeft()) && checkBST(root.getRight());
+    }
+
+
     public static boolean isBST(Node root) {
         if (root == null)
             return true;

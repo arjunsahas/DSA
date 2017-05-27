@@ -10,7 +10,7 @@ public class Runner {
 
 	private Lock lock = new ReentrantLock();
 	private Condition condition = lock.newCondition();
-	private LinkedList<Integer> list = new LinkedList<Integer>();
+	private LinkedList<Integer> list = new LinkedList<>();
 	private static final int LIMIT = 10;
 	private Random random;
 

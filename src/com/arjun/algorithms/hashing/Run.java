@@ -8,12 +8,12 @@ import java.util.Objects;
 public class Run {
     public static void main(String[] args) {
         HashTable<Employee, String> hashtable = new HashTable<>();
-        Employee employee = new Employee("arjun", 33);
-        hashtable.insert(employee, "arjun");
-        employee = new Employee("venu", 37);
-        hashtable.insert(employee, "venu");
-        employee = new Employee("deepak", 40);
-        hashtable.insert(employee, "deepak");
+        Employee employee = new Employee("emp1", 33);
+        hashtable.insert(employee, "emp1");
+        employee = new Employee("emp4", 37);
+        hashtable.insert(employee, "emp4");
+        employee = new Employee("emp5", 40);
+        hashtable.insert(employee, "emp5");
 
         employee = new Employee("emp2", 40);
         hashtable.insert(employee, "emp2");
@@ -28,7 +28,7 @@ public class Run {
 
         System.out.println(hashtable.get(new Employee("emp2", 40)));
 
-        System.out.println(hashtable.get(new Employee("deepak", 40)));
+        System.out.println(hashtable.get(new Employee("emp5", 40)));
 
         System.out.println("Removed " + hashtable.remove(new Employee("3emp", 40)));
 

@@ -15,7 +15,8 @@ class Solution {
             result[n] = n;
             return result[n];
         }
-        if (result[n] != -1) return result[n];
+        if (result[n] != -1)
+            return result[n];
         result[n] = climbStairs1(n - 1, result) + climbStairs1(n - 2, result);
         return result[n];
     }

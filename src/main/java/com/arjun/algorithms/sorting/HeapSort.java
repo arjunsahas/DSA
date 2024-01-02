@@ -3,6 +3,38 @@ package com.arjun.algorithms.sorting;
 import java.util.Scanner;
 
 public class HeapSort {
+    private static void maxHeapify(int[] array, int i, int length) {
+        int leftChild = 2 * i + 1;
+        int rightChild = 2 * i + 2;
+        int root = i;
+        if (leftChild < length) {
+            if (array[leftChild] > array[root]) {
+                swap(array, leftChild, root);
+                maxHeapify(array, leftChild, length);
+            }
+        }
+        if (rightChild < length) {
+            if (array[rightChild] > array[root]) {
+                swap(array, rightChild, root);
+                maxHeapify(array, rightChild, length);
+            }
+        }
+        printArray(array);
+    }
+
+    private static void swap(int[] ar, int i, int j) {
+        int temp = ar[i];
+        ar[i] = ar[j];
+        ar[j] = temp;
+    }
+
+    static void printArray(int[] ar) {
+        for (int n : ar) {
+            System.out.print(n + " ");
+        }
+        System.out.println("");
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -23,37 +55,5 @@ public class HeapSort {
             maxHeapify(array, 0, --l);
         }
         printArray(sortedArray);
-    }
-
-    private static void maxHeapify(int[] array, int i, int length) {
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
-        int root = i;
-        if (left < length) {
-            if (array[left] > array[root]) {
-                swap(array, left, root);
-                maxHeapify(array, left, length);
-            }
-        }
-        if (right < length) {
-            if (array[right] > array[root]) {
-                swap(array, right, root);
-                maxHeapify(array, right, length);
-            }
-        }
-        printArray(array);
-    }
-
-    private static void swap(int[] ar, int i, int j) {
-        int temp = ar[i];
-        ar[i] = ar[j];
-        ar[j] = temp;
-    }
-
-    static void printArray(int[] ar) {
-        for (int n : ar) {
-            System.out.print(n + " ");
-        }
-        System.out.println("");
     }
 }

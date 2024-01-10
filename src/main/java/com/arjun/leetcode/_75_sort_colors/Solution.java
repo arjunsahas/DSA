@@ -1,6 +1,6 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._75_sort_colors;
 
-public class Solution111111 {
+public class Solution {
     public void sortColors(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - 1; j++) {
@@ -14,6 +14,6 @@ public class Solution111111 {
     }
 
     public static void main(String[] args) {
-        new Solution111111().sortColors(new int[] {2,0,2,1,1,0});
+        new Solution().sortColors(new int[] {2,0,2,1,1,0});
     }
 }

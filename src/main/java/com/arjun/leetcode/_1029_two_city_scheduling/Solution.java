@@ -1,8 +1,8 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._1029_two_city_scheduling;
 
 import java.util.Arrays;
 
-public class Solution111 {
+public class Solution {
 
     public int twoCitySchedCost(int[][] costs) {
         int totalCosts = 0;

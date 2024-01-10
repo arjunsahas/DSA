@@ -1,4 +1,4 @@
-package com.arjun.leetcode.pascalfunction;
+package com.arjun.leetcode._118_pascalfunction;
 
 import java.util.ArrayList;
 import java.util.Arrays;

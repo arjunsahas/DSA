@@ -1,4 +1,4 @@
-package com.arjun.leetcode.hindex;
+package com.arjun.leetcode._275_hindex;
 
 import java.util.ArrayList;
 import java.util.Collections;

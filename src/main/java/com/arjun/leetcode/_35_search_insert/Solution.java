@@ -1,6 +1,6 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._35_search_insert;
 
-public class ThirtyFive {
+public class Solution {
     public int searchInsert(int[] nums, int target) {
         int l = 0;
         int r = nums.length - 1;
@@ -18,6 +18,6 @@ public class ThirtyFive {
     }
 
     public static void main(String[] args) {
-        new ThirtyFive().searchInsert(new int[]{1, 3, 5, 6}, 5);
+        new Solution().searchInsert(new int[]{1, 3, 5, 6}, 5);
     }
 }

@@ -1,4 +1,4 @@
-package com.arjun.leetcode.coinchange;
+package com.arjun.leetcode._322_coinchange;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.arjun.leetcode.movingzeros;
+package com.arjun.leetcode._283_movingzeros;
 
 public class Solution {
         public void moveZeroes(int[] nums) {

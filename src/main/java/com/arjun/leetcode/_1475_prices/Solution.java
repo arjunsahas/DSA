@@ -1,4 +1,4 @@
-package com.arjun.leetcode.prices;
+package com.arjun.leetcode._1475_prices;
 
 class Solution {
     public int[] finalPrices(int[] prices) {

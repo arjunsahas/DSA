@@ -1,4 +1,4 @@
-package com.arjun.leetcode.top_k_frequent_words_692;
+package com.arjun.leetcode._692_top_k_frequent_words;
 
 import java.util.ArrayList;
 import java.util.List;

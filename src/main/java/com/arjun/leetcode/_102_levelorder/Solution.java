@@ -1,4 +1,4 @@
-package com.arjun.leetcode.levelorder102;
+package com.arjun.leetcode._102_levelorder;
 
 
 import java.io.BufferedReader;

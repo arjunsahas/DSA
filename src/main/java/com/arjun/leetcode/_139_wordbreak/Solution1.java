@@ -1,4 +1,4 @@
-package com.arjun.leetcode.wordbreak139;
+package com.arjun.leetcode._139_wordbreak;
 
 import java.util.*;
 

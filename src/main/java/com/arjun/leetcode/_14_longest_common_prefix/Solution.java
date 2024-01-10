@@ -1,4 +1,4 @@
-package com.arjun.leetcode.longest_common_prefix_14;
+package com.arjun.leetcode._14_longest_common_prefix;
 
 import java.util.HashMap;
 import java.util.Map;

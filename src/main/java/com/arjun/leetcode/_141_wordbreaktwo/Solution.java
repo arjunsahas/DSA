@@ -1,4 +1,4 @@
-package com.arjun.leetcode.wordbreaktwo141;
+package com.arjun.leetcode._141_wordbreaktwo;
 
 
 import java.util.ArrayList;

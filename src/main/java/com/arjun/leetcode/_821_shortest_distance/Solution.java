@@ -1,4 +1,4 @@
-package com.arjun.leetcode.shortest_distance_821;
+package com.arjun.leetcode._821_shortest_distance;
 
 import java.util.ArrayList;
 import java.util.List;

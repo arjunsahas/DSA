@@ -1,4 +1,4 @@
-package com.arjun.leetcode.eightytwo_removeduplicates;
+package com.arjun.leetcode._82_removeduplicates;
 
 
 class ListNode {

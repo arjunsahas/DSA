@@ -1,9 +1,9 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._451_frequency_sort;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution11 {
+class Solution {
     public String frequencySort(String s) {
         Map<Character, Integer> freqMap = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {

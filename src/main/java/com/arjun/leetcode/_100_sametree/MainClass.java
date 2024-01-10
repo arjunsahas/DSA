@@ -1,4 +1,4 @@
-package com.arjun.leetcode.sametree;
+package com.arjun.leetcode._100_sametree;
 
 import java.io.BufferedReader;
 import java.io.IOException;

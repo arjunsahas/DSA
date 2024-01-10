@@ -1,4 +1,4 @@
-package com.arjun.leetcode.sorroundingregions;
+package com.arjun.leetcode._130_sorroundingregions;
 
 class Solution {
     public void solve(char[][] grid) {

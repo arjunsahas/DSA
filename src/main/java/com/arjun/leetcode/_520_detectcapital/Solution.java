@@ -1,4 +1,4 @@
-package com.arjun.leetcode.detectcapital;
+package com.arjun.leetcode._520_detectcapital;
 
 class Solution {
     public boolean detectCapitalUse(String word) {

@@ -1,4 +1,4 @@
-package com.arjun.leetcode.validparanthesis;
+package com.arjun.leetcode._20_validparanthesis;
 
 import java.util.Stack;
 

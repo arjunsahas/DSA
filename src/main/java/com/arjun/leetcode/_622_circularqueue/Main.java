@@ -1,4 +1,4 @@
-package com.arjun.leetcode.circularqueue;
+package com.arjun.leetcode._622_circularqueue;
 
 class Main {
     private int[] q;
@@ -78,4 +78,61 @@ class Main {
         obj.isFull();
         System.out.println(obj);
     }
+}
+
+class MyCircularQueue {
+    private int[] q;
+    private int last = -1;
+    private int first = 0;
+    private int k = 0;
+
+    public MyCircularQueue(int k) {
+        this.q = new int[k];
+        this.k = q.length;
+    }
+
+    public boolean enQueue(int value) {
+        if(!isFull()) {
+            q[++last% k] = value;
+            System.out.println(last);
+            System.out.println(toString());
+            return true;
+        }
+        return false;
+    }
+
+    public boolean deQueue() {
+        if(!isEmpty()) {
+            first++;
+            System.out.println(first);
+            System.out.println(toString());
+            return true;
+        }
+        return false;
+    }
+
+    public int Front() {
+        return !isEmpty() ? q[first % k] : -1;
+    }
+
+    public int Rear() {
+        return !isEmpty() ? q[last % k] : -1;
+    }
+
+    public boolean isEmpty() {
+        return first > last;
+    }
+
+    public boolean isFull() {
+        return last - first + 1 == k;
+    }
+
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        for(int i: q) {
+            builder.append(i).append(",");
+        }
+        return builder.toString();
+    }
+
 }

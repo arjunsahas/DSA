@@ -1,4 +1,4 @@
-package com.arjun.leetcode.climbstairs;
+package com.arjun.leetcode._70_climbstairs;
 
 import java.util.Arrays;
 

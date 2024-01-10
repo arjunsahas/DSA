@@ -3,3 +3,7 @@
 .idea/*
 *.iml
 .settings
+.classpath
+.project
+```
+.vscode

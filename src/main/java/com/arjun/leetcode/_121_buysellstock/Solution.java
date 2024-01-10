@@ -1,4 +1,4 @@
-package com.arjun.leetcode.buysellstock;
+package com.arjun.leetcode._121_buysellstock;
 
 class Solution {
     private static int maxProfit;

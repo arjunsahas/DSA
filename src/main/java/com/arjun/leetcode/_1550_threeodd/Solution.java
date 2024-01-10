@@ -1,4 +1,4 @@
-package com.arjun.leetcode.threeodd;
+package com.arjun.leetcode._1550_threeodd;
 
 class Solution {
     public boolean threeConsecutiveOdds(int[] arr) {

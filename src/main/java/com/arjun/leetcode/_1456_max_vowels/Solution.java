@@ -1,4 +1,4 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._1456_max_vowels;
 
 import java.util.HashMap;
 import java.util.Map;

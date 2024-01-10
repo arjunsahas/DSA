@@ -1,8 +1,8 @@
-package com.arjun.leetcode;
+package com.arjun.leetcode._438_find_anagrams;
 
 import java.util.*;
 
-public class FiveThritySix {
+public class Solution {
 
     public List<Integer> findAnagrams(String s, String p) {
         Map<Character, Boolean> map = new HashMap<>();
@@ -43,8 +43,8 @@ public class FiveThritySix {
     }
 
     public static void main(String[] args) {
-        FiveThritySix fiveThritySix =  new FiveThritySix();
-        List<Integer> anagrams = fiveThritySix.findAnagrams("ababababab" ,"aab");
+        Solution solution =  new Solution();
+        List<Integer> anagrams = solution.findAnagrams("ababababab" ,"aab");
         System.out.println(anagrams);
     }
 }

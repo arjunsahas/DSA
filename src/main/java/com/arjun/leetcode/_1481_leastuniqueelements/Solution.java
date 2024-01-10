@@ -1,4 +1,4 @@
-package com.arjun.leetcode.leastuniqueelements;
+package com.arjun.leetcode._1481_leastuniqueelements;
 
 import java.util.*;
 

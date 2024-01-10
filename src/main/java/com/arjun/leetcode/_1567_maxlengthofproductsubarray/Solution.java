@@ -1,4 +1,4 @@
-package com.arjun.leetcode.maxlengthofproductsubarray;
+package com.arjun.leetcode._1567_maxlengthofproductsubarray;
 
 class Solution {
     public int getMaxLen(int[] nums) {

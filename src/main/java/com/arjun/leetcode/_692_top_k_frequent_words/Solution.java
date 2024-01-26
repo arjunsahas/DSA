@@ -150,5 +150,8 @@ public class Solution {
 
         strings = new Solution().topKFrequent(new String[]{"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"}, 4);
         System.out.println(strings);
+
+        strings = new Solution().topKFrequent(new String[]{"up", "upstox", "broking", "finance", "stocks", "up", "upstox", "up"}, 4);
+        System.out.println(strings);
     }
 }

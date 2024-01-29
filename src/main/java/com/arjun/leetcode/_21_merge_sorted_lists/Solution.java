@@ -1,5 +1,7 @@
 package com.arjun.leetcode._21_merge_sorted_lists;
 
+import com.arjun.leetcode.ListNode;
+
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists
  */
@@ -62,23 +64,6 @@ class Solution {
         while (listNode != null) {
             System.out.println(listNode.val);
             listNode = listNode.next;
-        }
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
         }
     }
 

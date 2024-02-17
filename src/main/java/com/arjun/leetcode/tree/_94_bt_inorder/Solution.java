@@ -1,4 +1,4 @@
-package com.arjun.leetcode.tree._94_binary_inorder;
+package com.arjun.leetcode.tree._94_bt_inorder;
 
 import com.arjun.leetcode.tree.TreeNode;
 

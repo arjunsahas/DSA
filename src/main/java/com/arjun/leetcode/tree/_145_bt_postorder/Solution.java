@@ -1,4 +1,4 @@
-package com.arjun.leetcode.tree._145_binary_postorder;
+package com.arjun.leetcode.tree._145_bt_postorder;
 
 import com.arjun.leetcode.tree.TreeNode;
 

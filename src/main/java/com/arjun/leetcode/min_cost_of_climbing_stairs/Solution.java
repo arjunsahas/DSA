@@ -3,7 +3,7 @@ package com.arjun.leetcode.min_cost_of_climbing_stairs;
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+public class Solution {
     Map<Integer, Integer> memo = new HashMap<>();
 
     public int minCostClimbingStairs(int[] cost) {

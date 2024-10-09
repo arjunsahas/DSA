@@ -1,6 +1,6 @@
 package com.arjun.leetcode.search_in_bst;
 
-//class Solution {
+// class Solution {
 //    public TreeNode searchBST(TreeNode root, int val) {
 //        if(root == null) return null;
 //        if(root.val == val) return root;
@@ -8,4 +8,4 @@ package com.arjun.leetcode.search_in_bst;
 //        else if (root.val > val) searchBST(root.right, val);
 //        return null;
 //    }
-//}
+// }

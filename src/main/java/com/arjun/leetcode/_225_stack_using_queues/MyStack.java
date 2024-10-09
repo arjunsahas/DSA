@@ -6,82 +6,74 @@ import java.util.Queue;
 
 class MyStack {
 
-    Queue<Integer> queue = new ArrayDeque<>();
+  Queue<Integer> queue = new ArrayDeque<>();
 
-    public MyStack() {
-        
-    }
-    
-    public void push(int x) {
-        queue.offer(x);
-    }
-    
-    public int pop() {
-        Integer lastElement = -1;
-        int count = 0;
-        if(!queue.isEmpty()) {
-            Iterator<Integer> iterator = queue.iterator();
-            while (iterator.hasNext()) {
-                lastElement = iterator.next();
-                if(count == queue.size() -1) {
-                    iterator.remove();
-                }
-                count++;
-            }
+  public MyStack() {}
+
+  public void push(int x) {
+    queue.offer(x);
+  }
+
+  public int pop() {
+    Integer lastElement = -1;
+    int count = 0;
+    if (!queue.isEmpty()) {
+      Iterator<Integer> iterator = queue.iterator();
+      while (iterator.hasNext()) {
+        lastElement = iterator.next();
+        if (count == queue.size() - 1) {
+          iterator.remove();
         }
-        return lastElement;
+        count++;
+      }
     }
-    
-    public int top() {
-        Integer lastElement = -1;
-        if(!queue.isEmpty()) {
-            Iterator<Integer> iterator = queue.iterator();
-            while (iterator.hasNext()) {
-                lastElement = iterator.next();
+    return lastElement;
+  }
 
-            }
-        }
-        return lastElement;
+  public int top() {
+    Integer lastElement = -1;
+    if (!queue.isEmpty()) {
+      Iterator<Integer> iterator = queue.iterator();
+      while (iterator.hasNext()) {
+        lastElement = iterator.next();
+      }
     }
-    
-    public boolean empty() {
-        return queue.isEmpty();
-    }
+    return lastElement;
+  }
 
-    public static void main(String[] args) {
-        MyStack myStack = new MyStack();
-        myStack.push(1);
-        myStack.push(2);
-        myStack.push(3);
-        myStack.push(3);
+  public boolean empty() {
+    return queue.isEmpty();
+  }
 
-        System.out.println(myStack.pop());
-        System.out.println(myStack.pop());
-        System.out.println(myStack.top());
+  public static void main(String[] args) {
+    MyStack myStack = new MyStack();
+    myStack.push(1);
+    myStack.push(2);
+    myStack.push(3);
+    myStack.push(3);
 
-        System.out.println(myStack.pop());
-        System.out.println(myStack.pop());
+    System.out.println(myStack.pop());
+    System.out.println(myStack.pop());
+    System.out.println(myStack.top());
 
-        System.out.println(myStack.empty());
+    System.out.println(myStack.pop());
+    System.out.println(myStack.pop());
 
-        myStack.push(1);
-        myStack.push(2);
-        myStack.push(3);
-        myStack.push(4);
-        myStack.push(2);
+    System.out.println(myStack.empty());
 
-        System.out.println(myStack.top());
-        System.out.println(myStack.pop());
-        System.out.println(myStack.top());
+    myStack.push(1);
+    myStack.push(2);
+    myStack.push(3);
+    myStack.push(4);
+    myStack.push(2);
 
-    }
+    System.out.println(myStack.top());
+    System.out.println(myStack.pop());
+    System.out.println(myStack.top());
+  }
 }
 
 /**
- * Your MyStack object will be instantiated and called as such:
- * MyStack obj = new MyStack();
- * obj.push(x);
- * int param_2 = obj.pop();
- * int param_3 = obj.top();
- * boolean param_4 = obj.empty();
+ * Your MyStack object will be instantiated and called as such: MyStack obj = new MyStack();
+ * obj.push(x); int param_2 = obj.pop(); int param_3 = obj.top(); boolean param_4 = obj.empty();
  */

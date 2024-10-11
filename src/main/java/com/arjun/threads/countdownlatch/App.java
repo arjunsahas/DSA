@@ -31,17 +31,13 @@ public class App {
 
     Thread t2 =
         new Thread(
-            new Runnable() {
-
-              @Override
-              public void run() {
-                System.out.println("Enter to Multiply");
-                Scanner scanner = new Scanner(System.in);
-                int a = scanner.nextInt();
-                int b = scanner.nextInt();
-                product = product(a, b);
-                countDownLatch.countDown();
-              }
+            () -> {
+              System.out.println("Enter to Multiply");
+              Scanner scanner = new Scanner(System.in);
+              int a = scanner.nextInt();
+              int b = scanner.nextInt();
+              product = product(a, b);
+              countDownLatch.countDown();
             });
 
     t1.start();

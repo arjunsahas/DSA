@@ -5,31 +5,25 @@ public class App {
     final Runner runner = new Runner();
     Thread t1 =
         new Thread(
-            new Runnable() {
-              @Override
-              public void run() {
-                try {
-                  while (true) {
-                    runner.produce();
-                  }
-                } catch (InterruptedException e) {
-                  e.printStackTrace();
+            () -> {
+              try {
+                while (true) {
+                  runner.produce();
                 }
+              } catch (InterruptedException e) {
+                e.printStackTrace();
               }
             });
 
     Thread t2 =
         new Thread(
-            new Runnable() {
-              @Override
-              public void run() {
-                try {
-                  while (true) {
-                    runner.consume();
-                  }
-                } catch (InterruptedException e) {
-                  e.printStackTrace();
+            () -> {
+              try {
+                while (true) {
+                  runner.consume();
                 }
+              } catch (InterruptedException e) {
+                e.printStackTrace();
               }
             });
 

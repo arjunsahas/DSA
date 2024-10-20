@@ -4,7 +4,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * You are given an integer array A.
+ * https://www.interviewbit.com/problems/occurence-of-each-number/
+ *
+ * <p>You are given an integer array A.
  *
  * <p>You have to find the number of occurences of each number.
  *

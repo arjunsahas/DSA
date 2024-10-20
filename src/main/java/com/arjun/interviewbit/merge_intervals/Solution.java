@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Definition for an interval. public class Interval { int start; int end; Interval() { start = 0;
- * end = 0; } Interval(int s, int e) { start = s; end = e; } }
- */
+/** https://www.interviewbit.com/problems/merge-intervals/ */
 public class Solution {
   public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
     int minInSet = 0;
@@ -62,25 +59,5 @@ public class Solution {
     insert =
         new Solution().insert(List.of(new Interval(1, 2), new Interval(3, 6)), new Interval(10, 8));
     System.out.println(insert);
-  }
-
-  static class Interval {
-    int start;
-    int end;
-
-    public Interval() {
-      start = 0;
-      end = 0;
-    }
-
-    public Interval(int s, int e) {
-      start = s;
-      end = e;
-    }
-
-    @Override
-    public String toString() {
-      return "Interval{" + "start=" + start + ", end=" + end + '}';
-    }
   }
 }

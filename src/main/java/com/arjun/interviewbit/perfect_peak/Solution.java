@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 /**
  * https://www.interviewbit.com/problems/perfect-peak-of-array/ The solution is a O(n2) solution.
+ *
+ * <p>The solution simply iterates over the array and compares whether the integers before it is
+ * lesser than "i" and the integers after it is greater than "i".
  */
 public class Solution {
   public int perfectPeak(ArrayList<Integer> A) {

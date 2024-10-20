@@ -7,6 +7,10 @@ import java.util.List;
 
 /**
  * https://www.interviewbit.com/problems/perfect-peak-of-array/ The solution is a O(n2) solution.
+ *
+ * <p>This solution is a slight improvement from the first solution in that there is no nested loop.
+ * But, this calculates max and min for each iteration making the complexity O(n2). But, this also
+ * uses O(n) space.
  */
 public class Solution1 {
   public int perfectPeak(ArrayList<Integer> A) {

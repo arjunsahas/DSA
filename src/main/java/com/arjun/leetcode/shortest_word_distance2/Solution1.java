@@ -1,11 +1,6 @@
 package com.arjun.leetcode.shortest_word_distance2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Solution1 {
 

@@ -9,7 +9,7 @@ class EventStorage {
 
   public EventStorage() {
     maxSize = 10;
-    storage = new LinkedList<Date>();
+    storage = new LinkedList<>();
   }
 
   public synchronized void set() {

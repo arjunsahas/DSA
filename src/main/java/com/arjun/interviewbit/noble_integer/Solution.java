@@ -3,7 +3,9 @@ package com.arjun.interviewbit.noble_integer;
 import java.util.Arrays;
 
 /**
- * Given an integer array A, find if an integer p exists in the array such that the number of
+ * https://www.interviewbit.com/problems/noble-integer/
+ *
+ * <p>Given an integer array A, find if an integer p exists in the array such that the number of
  * integers greater than p in the array equals to p.
  */
 public class Solution {

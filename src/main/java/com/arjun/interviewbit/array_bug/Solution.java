@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Solution {
   public ArrayList<Integer> rotateArray(ArrayList<Integer> A, int B) {
     if (B >= A.size()) B = B % A.size();
-    ArrayList<Integer> ret = new ArrayList<Integer>();
+    ArrayList<Integer> ret = new ArrayList<>();
 
     for (int i = 0; i < A.size(); i++) {
       if (i + B >= A.size()) break;

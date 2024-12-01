@@ -1,6 +1,5 @@
 package com.arjun.interviewbit.pick_from_both_sides;
 
-
 import java.util.*;
 
 /** This is a sliding window problem. */

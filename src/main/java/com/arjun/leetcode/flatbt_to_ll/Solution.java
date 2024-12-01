@@ -1,6 +1,5 @@
 package com.arjun.leetcode.flatbt_to_ll;
 
-
 class Solution {
   public void flatten(TreeNode root) {
     if (root == null) return;
